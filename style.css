@@ -1,0 +1,264 @@
+:root
+{
+    --blue : #0091ff;
+    --white : #ffffff;
+    --blue-dark : #3842ff;
+    --black : #ffffff;
+    --blue-old : #0800ff;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    font-family: 'Tahoma' ;
+}
+
+body
+{
+    background-color: var(--white);
+    color: var(--white);
+}
+
+header
+{
+    align-items: center;
+    text-align: center;
+    background-color: var(--blue);
+    position: fixed;
+    width: 100%;
+    font-weight: bold;
+    padding: 2%;
+    top: 0;
+}
+
+.title
+{
+    color: var(--white);
+    border-bottom: 1px solid var(--white);
+    font-size: 15pt;
+}
+
+.input-search
+{
+    width: 30%;
+    border: none;
+    border-radius: 0 0 0 10px;
+    padding: 2px;
+}
+
+.input-sudmit
+{
+    margin-left: -5px;
+    border: none;
+    border-radius: 0 0 10px 0;
+    padding: 2px;
+    background-color: var(--blue-dark);
+    width: 5%;
+    font-weight: bold;
+}
+
+nav
+{
+    margin-top: 20px;
+}
+
+nav ul
+{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+
+nav ul li a
+{
+    color: var(--white);
+}
+
+nav ul li a:hover
+{
+    border-bottom: 3px solid var(--white);
+}
+
+.slider
+{
+    margin-top: 10%;
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 53%;
+}
+
+.slider h4
+{
+    margin-top: 20%;
+}
+
+.slides
+{
+    display: flex;
+    width: 50rem;
+    overflow: hidden;
+}
+
+.slides img 
+{
+    border-radius: 10px;
+}
+
+.slide
+{
+    width: 50rem;
+    transition: .5s;
+}
+
+.choose_1:checked ~ .slides > .s1
+{
+    margin-left: -0rem;
+}
+
+.choose_2:checked ~ .slides > .s1
+{
+    margin-left: -50rem;
+}
+
+.overlay 
+{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target 
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup 
+{
+    margin: 70px auto;
+    padding: 20px;
+    background: var(--dark-blue);
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+  
+.popup h2 {
+    margin-top: 0;
+    color: var(--white);
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup .close:hover 
+{
+    color: #06D85F;
+}
+
+.content 
+{
+    max-height: 40%;
+    width: 60%;
+}
+
+ .populer
+{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.title-p
+{
+    color: var(--blue);
+    margin-left: 75px;
+}
+
+.populer img
+{
+    border-radius: 10px;
+}
+
+.harga
+{
+    color: var(--blue);
+    background-color: var(--white);
+}
+
+.link a
+{
+    color: var(--white);
+}
+
+.link a:hover
+{
+    color: var(--blue);
+}
+
+.pesan img
+{
+    width: 30px;
+}
+
+.pesan 
+{
+    background-color: var(--blue);
+    padding: 5%;
+    border-radius: 10%;
+}
+
+.pesan:hover
+{
+    background-color: var(--white);
+}
+
+@media screen and (max-width: 600px) {
+    nav ul li a
+    {
+        font-size: 11pt;
+    }
+
+.title-p
+{
+    padding-top: 6rem;
+    margin-left: 20px;
+}
+
+    .populer
+    {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        font-size: 10pt
+    }
+
+    .link img
+    {
+        width: 80%;
+    }
+    
+    
+}
